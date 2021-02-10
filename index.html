@@ -1,0 +1,15 @@
+    <html>
+    <head>
+    <script>
+            async function foo(){
+                await fetch('http://api.tvmaze.com/shows')
+                .then(res => res.json())
+                .then(res =>
+                 {
+                   document.body.innerHTML=res;
+                 });
+    </script>
+    </head>
+    <body>
+    </body>
+    </html>
