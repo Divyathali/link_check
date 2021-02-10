@@ -1,12 +1,17 @@
     <html>
     <head>
     <script>
-           
+                 var len=res.length;
                  fetch('http://api.tvmaze.com/shows')
                 .then(res => res.json())
                 .then(res =>
                  {
-                   document.body.innerHTML=res;
+                    for(var i=0;i<len;i++){ 
+                        var para=document.createElement('p');
+                        para.innerHTML=res[i];
+                        document.append(para);
+                    }                    
+                    console.log(res);                     
                  });
     </script>
     </head>
